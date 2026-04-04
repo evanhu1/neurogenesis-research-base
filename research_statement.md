@@ -1,9 +1,5 @@
 # Research Statement
 
-This is a first-pass synthesis inferred from the current `Neurogenesis` repo,
-especially `README.md`, `AGENTS.md`, the simulation config, and the evaluation
-harness.
-
 ## 1. Mission
 
 Build an artificial-life system in which cognition can emerge and keep
@@ -23,16 +19,14 @@ collapsing the task into a trivial benchmark.
 - Which inductive biases help most: topology growth, spatial priors,
   excitatory/inhibitory structure, leaky integrator dynamics, or runtime
   plasticity?
-- When does within-lifetime learning help evolution discover better genomes,
-  and when does it just add noise or instability?
+- When does within-lifetime learning help evolution discover better genomes, and
+  when does it just add noise or instability?
 - How should diversity be preserved so the system does not converge to
   degenerate niches or one-action hacks?
 - What metrics actually detect meaningful progress toward cognition rather than
   shallow score maximization?
 - What mechanisms are necessary for memory, navigation, predation, and
   behavioral adaptation to emerge reliably?
-- How do we keep the system deterministic and scientifically legible while
-  still supporting open-ended exploration?
 
 ## 3. Hypotheses / beliefs
 
@@ -46,14 +40,12 @@ collapsing the task into a trivial benchmark.
   too slow to discover adaptive behavior in rich environments.
 - Diversity preservation matters. Fresh injections, champion carryover, and
   eventually stronger lineage/speciation mechanisms likely help avoid collapse.
-- Good progress signals should reward viability, foraging, control,
-  competition, and adaptation simultaneously; optimizing only one of these is
-  likely to produce pathologies.
+- Good progress signals should reward viability, foraging, control, competition,
+  and adaptation simultaneously; optimizing only one of these is likely to
+  produce pathologies.
 - The right curriculum is probably ecological rather than explicitly staged:
   food, hazards, competition, predation, and nonstationarity should create the
   pressure for richer cognition.
-- Deterministic simulation plus multi-seed evaluation is a feature, not a
-  constraint, because it makes the research loop cumulative and debuggable.
 
 ## 4. Approach
 
@@ -64,27 +56,22 @@ collapsing the task into a trivial benchmark.
   can mutate over time.
 - NEAT-style structural mutation operators, plus spatial priors over new
   connections.
-- Runtime Hebbian-style plasticity with eligibility traces and a
-  dopamine-like reward signal derived from energy change.
+- Runtime Hebbian-style plasticity with eligibility traces and a dopamine-like
+  reward signal derived from energy change.
 - Multi-seed evaluation harness that scores viability, foraging, control,
   competition, and adaptation rather than only raw reward.
 - Interactive simulator plus champion-pool persistence so promising lineages can
   be inspected and reused.
-- Tight emphasis on reproducibility, determinism, and fast iteration in Rust.
 
 ## 5. Non-goals
 
-- Pure benchmark chasing on a fixed RL task.
 - Hand-authoring behaviors we claim to want evolution to discover.
 - Inflating scores by simplifying the world or automating decisions organisms
   are supposed to learn.
-- Backward compatibility for its own sake.
 - Maximum biological realism at every level. The project borrows useful priors
   from biology but is not trying to be a faithful wet-neuroscience simulator.
-- Solving morphology, embodiment, and real-world robotics first. The current
-  focus is cognition in a simulated 2D world.
-- Treating single-run anecdotes as scientific evidence; the repo clearly
-  prefers deterministic, multi-seed evaluation.
+- Solving morphology, embodiment, and real-world robotics. The current focus is
+  cognition in a simulated 2D world.
 
 ## 6. Current bets
 
@@ -115,49 +102,48 @@ Project and field-defining source materials:
 
 Foundational neuroevolution and indirect-encoding papers:
 
-- Stanley and Miikkulainen (2002), *Evolving Neural Networks through
-  Augmenting Topologies*.
-- Stanley, D'Ambrosio, and Gauci (2009), *A Hypercube-Based Encoding for
-  Evolving Large-Scale Neural Networks*.
-- Such et al. (2018), *Deep Neuroevolution: Genetic Algorithms Are a
-  Competitive Alternative for Training Deep Neural Networks for Reinforcement
-  Learning*.
+- Stanley and Miikkulainen (2002), _Evolving Neural Networks through Augmenting
+  Topologies_.
+- Stanley, D'Ambrosio, and Gauci (2009), _A Hypercube-Based Encoding for
+  Evolving Large-Scale Neural Networks_.
+- Such et al. (2018), _Deep Neuroevolution: Genetic Algorithms Are a Competitive
+  Alternative for Training Deep Neural Networks for Reinforcement Learning_.
 
 Diversity, exploration, and open-ended search:
 
-- Lehman and Stanley (2011), *Abandoning Objectives: Evolution Through the
-  Search for Novelty Alone*.
-- Mouret and Clune (2015), *Illuminating Search Spaces by Mapping Elites*.
-- Wang et al. (2019), *Paired Open-Ended Trailblazer (POET)*.
+- Lehman and Stanley (2011), _Abandoning Objectives: Evolution Through the
+  Search for Novelty Alone_.
+- Mouret and Clune (2015), _Illuminating Search Spaces by Mapping Elites_.
+- Wang et al. (2019), _Paired Open-Ended Trailblazer (POET)_.
 
 Artificial life and open-ended evolution:
 
-- Ray (1991/1992), *An Approach to the Synthesis of Life*.
-- Ofria, Bryson, and Wilke (2009), *Avida: A Software Platform for Research in
-  Computational Evolutionary Biology*.
-- Taylor et al. (2016), *Open-Ended Evolution: Perspectives from the OEE
-  Workshop in York*.
-- Taylor (2019), *Evolutionary Innovations and Where to Find Them: Routes to
-  Open-Ended Evolution in Natural and Artificial Systems*.
-- Hintze (2019), *Open-Endedness for the Sake of Open-Endedness*.
-- Taylor (2020), *The Importance of Open-Endedness (for the Sake of
-  Open-Endedness)*.
+- Ray (1991/1992), _An Approach to the Synthesis of Life_.
+- Ofria, Bryson, and Wilke (2009), _Avida: A Software Platform for Research in
+  Computational Evolutionary Biology_.
+- Taylor et al. (2016), _Open-Ended Evolution: Perspectives from the OEE
+  Workshop in York_.
+- Taylor (2019), _Evolutionary Innovations and Where to Find Them: Routes to
+  Open-Ended Evolution in Natural and Artificial Systems_.
+- Hintze (2019), _Open-Endedness for the Sake of Open-Endedness_.
+- Taylor (2020), _The Importance of Open-Endedness (for the Sake of
+  Open-Endedness)_.
 
 Plasticity, neuromodulation, and lifetime learning:
 
-- Florian (2007), *Reinforcement Learning Through Modulation of Spike-Timing-
-  Dependent Synaptic Plasticity*.
-- Soltoggio and Bullinaria (2008), *Evolutionary Advantages of Neuromodulated
-  Plasticity*.
-- Coleman and Blair (2012), *Evolving Plastic Neural Networks for Online
-  Learning: Review and Future Directions*.
-- Soltoggio, Stanley, and Risi (2018), *Born to Learn: The Inspiration,
-  Progress, and Future of Evolved Plastic Artificial Neural Networks*.
-- Miconi, Stanley, and Clune (2018), *Differentiable Plasticity*.
+- Florian (2007), _Reinforcement Learning Through Modulation of Spike-Timing-
+  Dependent Synaptic Plasticity_.
+- Soltoggio and Bullinaria (2008), _Evolutionary Advantages of Neuromodulated
+  Plasticity_.
+- Coleman and Blair (2012), _Evolving Plastic Neural Networks for Online
+  Learning: Review and Future Directions_.
+- Soltoggio, Stanley, and Risi (2018), _Born to Learn: The Inspiration,
+  Progress, and Future of Evolved Plastic Artificial Neural Networks_.
+- Miconi, Stanley, and Clune (2018), _Differentiable Plasticity_.
 
 Embodied evolution / artificial creatures:
 
-- Sims (1994), *Evolving Virtual Creatures*.
+- Sims (1994), _Evolving Virtual Creatures_.
 
 ## 8. Open problems
 
