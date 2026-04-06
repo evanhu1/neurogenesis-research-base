@@ -92,60 +92,7 @@ collapsing the task into a trivial benchmark.
 - Reward-reversal and control metrics matter because adaptive cognition should
   survive nonstationarity, not just memorize one policy.
 
-## 7. Canon
-
-Project and field-defining source materials:
-
-- `Neurogenesis` repo itself, especially the README, AGENTS notes, config, and
-  evaluation harness.
-- Neuroevolution overview material such as the Wikipedia neuroevolution page.
-
-Foundational neuroevolution and indirect-encoding papers:
-
-- Stanley and Miikkulainen (2002), _Evolving Neural Networks through Augmenting
-  Topologies_.
-- Stanley, D'Ambrosio, and Gauci (2009), _A Hypercube-Based Encoding for
-  Evolving Large-Scale Neural Networks_.
-- Such et al. (2018), _Deep Neuroevolution: Genetic Algorithms Are a Competitive
-  Alternative for Training Deep Neural Networks for Reinforcement Learning_.
-
-Diversity, exploration, and open-ended search:
-
-- Lehman and Stanley (2011), _Abandoning Objectives: Evolution Through the
-  Search for Novelty Alone_.
-- Mouret and Clune (2015), _Illuminating Search Spaces by Mapping Elites_.
-- Wang et al. (2019), _Paired Open-Ended Trailblazer (POET)_.
-
-Artificial life and open-ended evolution:
-
-- Ray (1991/1992), _An Approach to the Synthesis of Life_.
-- Ofria, Bryson, and Wilke (2009), _Avida: A Software Platform for Research in
-  Computational Evolutionary Biology_.
-- Taylor et al. (2016), _Open-Ended Evolution: Perspectives from the OEE
-  Workshop in York_.
-- Taylor (2019), _Evolutionary Innovations and Where to Find Them: Routes to
-  Open-Ended Evolution in Natural and Artificial Systems_.
-- Hintze (2019), _Open-Endedness for the Sake of Open-Endedness_.
-- Taylor (2020), _The Importance of Open-Endedness (for the Sake of
-  Open-Endedness)_.
-
-Plasticity, neuromodulation, and lifetime learning:
-
-- Florian (2007), _Reinforcement Learning Through Modulation of Spike-Timing-
-  Dependent Synaptic Plasticity_.
-- Soltoggio and Bullinaria (2008), _Evolutionary Advantages of Neuromodulated
-  Plasticity_.
-- Coleman and Blair (2012), _Evolving Plastic Neural Networks for Online
-  Learning: Review and Future Directions_.
-- Soltoggio, Stanley, and Risi (2018), _Born to Learn: The Inspiration,
-  Progress, and Future of Evolved Plastic Artificial Neural Networks_.
-- Miconi, Stanley, and Clune (2018), _Differentiable Plasticity_.
-
-Embodied evolution / artificial creatures:
-
-- Sims (1994), _Evolving Virtual Creatures_.
-
-## 8. Open problems
+## 7. Open problems
 
 - A real curriculum for cognition: not just harder worlds, but worlds whose
   pressures naturally select for memory, planning, and adaptive internal state.
@@ -163,3 +110,29 @@ Embodied evolution / artificial creatures:
 - Mechanisms for modularity, hierarchy, and reuse in evolving brains.
 - Long-horizon experiment management: how to accumulate discoveries across runs
   without overfitting to one config or one metric bundle.
+
+## Reference Pages
+
+- [research_program.md](research_program.md)
+- [open_problems.md](open_problems.md)
+- [system/neurogenesis_system.md](system/neurogenesis_system.md)
+- [concepts/ecological_curriculum.md](concepts/ecological_curriculum.md)
+- [concepts/runtime_plasticity.md](concepts/runtime_plasticity.md)
+- [summaries/1991-ray-approach-to-synthesis-of-life.md](summaries/1991-ray-approach-to-synthesis-of-life.md)
+- [summaries/1994-sims-evolving-virtual-creatures.md](summaries/1994-sims-evolving-virtual-creatures.md)
+- [summaries/2002-stanley-miikkulainen-neat.md](summaries/2002-stanley-miikkulainen-neat.md)
+- [summaries/2007-florian-reward-modulated-stdp.md](summaries/2007-florian-reward-modulated-stdp.md)
+- [summaries/2008-soltoggio-et-al-neuromodulated-plasticity.md](summaries/2008-soltoggio-et-al-neuromodulated-plasticity.md)
+- [summaries/2009-ofria-bryson-wilke-avida.md](summaries/2009-ofria-bryson-wilke-avida.md)
+- [summaries/2009-stanley-dambrosio-gauci-hyperneat.md](summaries/2009-stanley-dambrosio-gauci-hyperneat.md)
+- [summaries/2011-lehman-stanley-novelty-search.md](summaries/2011-lehman-stanley-novelty-search.md)
+- [summaries/2012-coleman-blair-evolving-plastic-neural-networks.md](summaries/2012-coleman-blair-evolving-plastic-neural-networks.md)
+- [summaries/2015-mouret-clune-map-elites.md](summaries/2015-mouret-clune-map-elites.md)
+- [summaries/2016-taylor-et-al-open-ended-evolution-york.md](summaries/2016-taylor-et-al-open-ended-evolution-york.md)
+- [summaries/2017-such-et-al-deep-neuroevolution.md](summaries/2017-such-et-al-deep-neuroevolution.md)
+- [summaries/2018-miconi-stanley-clune-differentiable-plasticity.md](summaries/2018-miconi-stanley-clune-differentiable-plasticity.md)
+- [summaries/2018-soltoggio-stanley-risi-born-to-learn.md](summaries/2018-soltoggio-stanley-risi-born-to-learn.md)
+- [summaries/2019-hintze-open-endedness-for-the-sake.md](summaries/2019-hintze-open-endedness-for-the-sake.md)
+- [summaries/2019-taylor-routes-to-open-ended-evolution.md](summaries/2019-taylor-routes-to-open-ended-evolution.md)
+- [summaries/2019-wang-et-al-poet.md](summaries/2019-wang-et-al-poet.md)
+- [summaries/2020-taylor-importance-of-open-endedness.md](summaries/2020-taylor-importance-of-open-endedness.md)
