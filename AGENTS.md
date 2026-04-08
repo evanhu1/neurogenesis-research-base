@@ -1,7 +1,8 @@
 # Agent Instructions
 
 This repository is a knowledge base for an ongoing neuroevolution research
-project. The purpose of this repo is to support the scientific method and help
+project ([NeuroGenesis](https://github.com/evanhu1/NeuroGenesis)). The purpose
+of this repo is to support the scientific method and help
 the lab do original, novel science research.
 
 ## Repository Map
